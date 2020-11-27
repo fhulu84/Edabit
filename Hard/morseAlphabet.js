@@ -12,7 +12,7 @@ function morse(str) {
 	"U":"..-","V":"...-","W":".--","X":"-..-","Y":"-.--","Z":"--..",
    " ":"....."}
    
-  return  /.-/.test(str) 
+  return  /[.-]/.test(str) 
           ? str.split(' ').map(m => Object.keys(d).find(key => d[key] === m)).join('')
           : [...str.toUpperCase()].map(c => d[c]).join(' ');
 }
